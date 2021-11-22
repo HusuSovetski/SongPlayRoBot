@@ -15,7 +15,7 @@ async def blacklist(client, message):
         arg = get_arg(message)
         if len(arg) != 1:
             await message.reply(
-                "pass a user id or user name or reply to a user message"
+                "istifadeçi id ve ya istifadeçi adını ötürmek ve ya istifadeçi mesajına cavab vermek"
             )
             return ""
         if arg.startswith("@"):
@@ -23,7 +23,7 @@ async def blacklist(client, message):
                 user = await app.get_users(arg)
                 user_id = user.id
             except BadRequest as ex:
-                await message.reply("not a valid user")
+                await message.reply("Bu teyin olunmamış userdir")
                 print(ex)
                 return ""
         else:
