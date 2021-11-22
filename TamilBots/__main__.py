@@ -29,7 +29,7 @@ owner_help = """
 """
 
 
-@app.on_message(filters.create(ignore_blacklisted_users) & filters.command("start"))
+@app.on_mnnessage(filters.create(ignore_blacklisted_users) & filters.command("start"))
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user["id"]
